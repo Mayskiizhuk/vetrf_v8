@@ -818,7 +818,7 @@
 											<ContextMenu name="ДатаОкончанияОтбораКонтекстноеМеню" id="77"/>
 											<ExtendedTooltip name="ДатаОкончанияОтбораРасширеннаяПодсказка" id="78"/>
 											<Events>
-												<Event name="OnChange">ОбновитьСписокДокументов</Event>
+												<Event name="OnChange">ДатаОкончанияОтбораПриИзменении</Event>
 											</Events>
 										</InputField>
 										<Button name="ВыборПериода" id="453">
