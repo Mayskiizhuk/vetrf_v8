@@ -15,3 +15,5 @@ sonar.bat
 *.q9*
 build/
 docs/
+*.log
+.cursor
