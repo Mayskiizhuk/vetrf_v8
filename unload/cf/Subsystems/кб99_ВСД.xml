@@ -152,6 +152,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.кб99_ВСД_Гашение</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.кб99_ВСД_УправлениеФормой</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.кб99_ОбработкаНовыхПартий</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.кб99_СписаниеТоваров</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects>
