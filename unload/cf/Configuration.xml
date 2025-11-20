@@ -489,6 +489,7 @@
 			<DataProcessor>кб99_ЗавершениеПроизводственныхТранзакций</DataProcessor>
 			<DataProcessor>ЖурналРегистрации</DataProcessor>
 			<DataProcessor>кб99_ОбработкаНовыхПартий</DataProcessor>
+			<DataProcessor>кб99_СписаниеТоваров</DataProcessor>
 			<InformationRegister>кб99_ОрганизацияПоУмолчанию</InformationRegister>
 			<InformationRegister>кб99_ПроизводственнаяСпецификация</InformationRegister>
 			<InformationRegister>кб99_Запросы</InformationRegister>
