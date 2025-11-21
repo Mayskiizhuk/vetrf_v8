@@ -261,10 +261,10 @@
 		<Command name="DataProcessor.кб99_ИзменениеНомераАвтомобиля.StandardCommand.Open">
 			<CommandGroup>ActionsPanelTools</CommandGroup>
 		</Command>
-		<Command name="0:7e41b3aa-12b4-474e-9b45-5ed259dd5afe">
+		<Command name="DataProcessor.кб99_ОбработкаНовыхПартий.StandardCommand.Open">
 			<CommandGroup>ActionsPanelTools</CommandGroup>
 		</Command>
-		<Command name="DataProcessor.кб99_ОбработкаНовыхПартий.StandardCommand.Open">
+		<Command name="DataProcessor.кб99_СписаниеТоваров.StandardCommand.Open">
 			<CommandGroup>ActionsPanelTools</CommandGroup>
 		</Command>
 	</CommandsOrder>

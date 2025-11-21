@@ -453,10 +453,35 @@
 												</InputField>
 											</ChildItems>
 										</ColumnGroup>
+										<LabelField name="ПродукцияКоличествоДоИзменения" id="530">
+											<DataPath>Объект.Продукция.КоличествоДоИзменения</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>10</Width>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧДЦ=3</v8:content>
+												</v8:item>
+											</Format>
+											<ContextMenu name="ПродукцияКоличествоДоИзмененияКонтекстноеМеню" id="531"/>
+											<ExtendedTooltip name="ПродукцияКоличествоДоИзмененияРасширеннаяПодсказка" id="532"/>
+										</LabelField>
 										<InputField name="ПродукцияКоличество" id="328">
 											<DataPath>Объект.Продукция.Количество</DataPath>
 											<EditMode>EnterOnInput</EditMode>
 											<Width>10</Width>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧДЦ=3</v8:content>
+												</v8:item>
+											</Format>
+											<EditFormat>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧДЦ=3</v8:content>
+												</v8:item>
+											</EditFormat>
 											<ContextMenu name="ПродукцияКоличествоКонтекстноеМеню" id="329"/>
 											<ExtendedTooltip name="ПродукцияКоличествоРасширеннаяПодсказка" id="330"/>
 										</InputField>
@@ -1114,6 +1139,75 @@
 									<ContextMenu name="дсОстаткиПартийКоличествоКонтекстноеМеню" id="507"/>
 									<ExtendedTooltip name="дсОстаткиПартийКоличествоРасширеннаяПодсказка" id="508"/>
 								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаДокументыОснования" id="509">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документы основания</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница документы основания</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаДокументыОснованияРасширеннаяПодсказка" id="510"/>
+					<ChildItems>
+						<Table name="ДокументыОснования" id="511">
+							<CommandBarLocation>None</CommandBarLocation>
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ДокументыОснования</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ДокументыОснованияКонтекстноеМеню" id="512"/>
+							<AutoCommandBar name="ДокументыОснованияКоманднаяПанель" id="513"/>
+							<ExtendedTooltip name="ДокументыОснованияРасширеннаяПодсказка" id="514"/>
+							<SearchStringAddition name="ДокументыОснованияСтрокаПоиска" id="515">
+								<AdditionSource>
+									<Item>ДокументыОснования</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДокументыОснованияСтрокаПоискаКонтекстноеМеню" id="516"/>
+								<ExtendedTooltip name="ДокументыОснованияСтрокаПоискаРасширеннаяПодсказка" id="517"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ДокументыОснованияСостояниеПросмотра" id="518">
+								<AdditionSource>
+									<Item>ДокументыОснования</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДокументыОснованияСостояниеПросмотраКонтекстноеМеню" id="519"/>
+								<ExtendedTooltip name="ДокументыОснованияСостояниеПросмотраРасширеннаяПодсказка" id="520"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ДокументыОснованияУправлениеПоиском" id="521">
+								<AdditionSource>
+									<Item>ДокументыОснования</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ДокументыОснованияУправлениеПоискомКонтекстноеМеню" id="522"/>
+								<ExtendedTooltip name="ДокументыОснованияУправлениеПоискомРасширеннаяПодсказка" id="523"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ДокументыОснованияНомерСтроки" id="524">
+									<DataPath>Объект.ДокументыОснования.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДокументыОснованияНомерСтрокиКонтекстноеМеню" id="525"/>
+									<ExtendedTooltip name="ДокументыОснованияНомерСтрокиРасширеннаяПодсказка" id="526"/>
+								</LabelField>
+								<InputField name="ДокументыОснованияДокументОснования" id="527">
+									<DataPath>Объект.ДокументыОснования.ДокументОснования</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ДокументыОснованияДокументОснованияКонтекстноеМеню" id="528"/>
+									<ExtendedTooltip name="ДокументыОснованияДокументОснованияРасширеннаяПодсказка" id="529"/>
+								</InputField>
 							</ChildItems>
 						</Table>
 					</ChildItems>
