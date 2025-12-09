@@ -1036,6 +1036,13 @@
 												<Event name="OnChange">ТоварыКоличествоПриИзменении</Event>
 											</Events>
 										</InputField>
+										<InputField name="ТоварыКоличество1с" id="790">
+											<DataPath>Объект.Товары.Количество1с</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ТоварыКоличество1сКонтекстноеМеню" id="791"/>
+											<ExtendedTooltip name="ТоварыКоличество1сРасширеннаяПодсказка" id="792"/>
+										</InputField>
 										<InputField name="ТоварыЕдиницаИзмерения" id="123">
 											<DataPath>Объект.Товары.ЕдиницаИзмерения</DataPath>
 											<EditMode>EnterOnInput</EditMode>

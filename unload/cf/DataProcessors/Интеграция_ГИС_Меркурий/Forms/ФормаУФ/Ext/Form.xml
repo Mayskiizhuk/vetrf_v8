@@ -1663,6 +1663,13 @@
 									<ContextMenu name="ПартииКоличествоМестСписанияКонтекстноеМеню" id="223"/>
 									<ExtendedTooltip name="ПартииКоличествоМестСписанияРасширеннаяПодсказка" id="224"/>
 								</InputField>
+								<InputField name="ПартииКоличество1с" id="745">
+									<DataPath>Объект.Партии.Количество1с</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ПартииКоличество1сКонтекстноеМеню" id="746"/>
+									<ExtendedTooltip name="ПартииКоличество1сРасширеннаяПодсказка" id="747"/>
+								</InputField>
 								<InputField name="ПартииВСД_Производство" id="225">
 									<DataPath>Объект.Партии.ВСД_Производство</DataPath>
 									<EditMode>EnterOnInput</EditMode>
