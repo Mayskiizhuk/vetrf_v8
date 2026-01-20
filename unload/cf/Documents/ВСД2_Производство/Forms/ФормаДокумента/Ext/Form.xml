@@ -497,6 +497,13 @@
 											<ContextMenu name="ПродукцияКоличествоКонтекстноеМеню" id="100"/>
 											<ExtendedTooltip name="ПродукцияКоличествоРасширеннаяПодсказка" id="101"/>
 										</InputField>
+										<InputField name="ПродукцияКоличество1с" id="639">
+											<DataPath>Объект.Продукция.Количество1с</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ПродукцияКоличество1сКонтекстноеМеню" id="640"/>
+											<ExtendedTooltip name="ПродукцияКоличество1сРасширеннаяПодсказка" id="641"/>
+										</InputField>
 										<InputField name="ПродукцияЕдиницаИзмерения" id="102">
 											<DataPath>Объект.Продукция.ЕдиницаИзмерения</DataPath>
 											<EditMode>EnterOnInput</EditMode>

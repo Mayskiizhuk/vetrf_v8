@@ -1,81 +1,47 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
-	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
-		<ChildItems>
-			<Button name="ФормаСписать" id="27">
-				<Type>CommandBarButton</Type>
-				<DefaultButton>true</DefaultButton>
-				<CommandName>Form.Command.Списать</CommandName>
-				<ExtendedTooltip name="ФормаСписатьРасширеннаяПодсказка" id="28"/>
-			</Button>
-		</ChildItems>
-	</AutoCommandBar>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
-		<UsualGroup name="ГруппаПериодОбновитьЗаПериод" id="25">
+		<UsualGroup name="ГруппаШапка" id="48">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Группа период обновить за период</v8:content>
+					<v8:content>Группа шапка</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Группа период обновить за период</v8:content>
+					<v8:content>Группа шапка</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Group>Horizontal</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="ГруппаПериодОбновитьЗаПериодРасширеннаяПодсказка" id="26"/>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="49"/>
 			<ChildItems>
-				<Button name="ОтметитьВсеДокументы" id="29">
-					<Type>UsualButton</Type>
-					<Representation>Picture</Representation>
-					<CommandName>Form.Command.ОтметитьВсеДокументы</CommandName>
-					<Picture>
-						<xr:Ref>StdPicture.CheckAll</xr:Ref>
-						<xr:LoadTransparent>true</xr:LoadTransparent>
-					</Picture>
-					<ExtendedTooltip name="ОтметитьВсеДокументыРасширеннаяПодсказка" id="30"/>
-				</Button>
-				<Button name="СнятьОтметкиСДокументов" id="31">
-					<Type>UsualButton</Type>
-					<Representation>Picture</Representation>
-					<CommandName>Form.Command.СнятьОтметкиСДокументов</CommandName>
-					<Picture>
-						<xr:Ref>StdPicture.UncheckAll</xr:Ref>
-						<xr:LoadTransparent>true</xr:LoadTransparent>
-					</Picture>
-					<ExtendedTooltip name="СнятьОтметкиСДокументовРасширеннаяПодсказка" id="32"/>
-				</Button>
-				<InputField name="Период" id="20">
-					<DataPath>Период</DataPath>
+				<InputField name="Организация" id="40">
+					<DataPath>Организация</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>28</MaxWidth>
 					<HorizontalStretch>false</HorizontalStretch>
-					<ContextMenu name="ПериодКонтекстноеМеню" id="21"/>
-					<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="22"/>
-					<Events>
-						<Event name="OnChange">ПериодПриИзменении</Event>
-					</Events>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="42"/>
 				</InputField>
-				<Button name="ФормаОбновитьЗаПериод" id="23">
-					<Type>UsualButton</Type>
-					<Representation>Picture</Representation>
-					<CommandName>Form.Command.ОбновитьЗаПериод</CommandName>
-					<Picture>
-						<xr:Ref>StdPicture.Refresh</xr:Ref>
-						<xr:LoadTransparent>true</xr:LoadTransparent>
-					</Picture>
-					<ExtendedTooltip name="ФормаОбновитьЗаПериодРасширеннаяПодсказка" id="24"/>
-				</Button>
+				<LabelField name="ТекстПериод" id="45">
+					<DataPath>ТекстПериод</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ContextMenu name="ТекстПериодКонтекстноеМеню" id="46"/>
+					<ExtendedTooltip name="ТекстПериодРасширеннаяПодсказка" id="47"/>
+				</LabelField>
 			</ChildItems>
 		</UsualGroup>
 		<Table name="Список" id="1">
 			<Representation>List</Representation>
-			<CommandBarLocation>None</CommandBarLocation>
 			<AutoInsertNewRow>true</AutoInsertNewRow>
 			<EnableStartDrag>true</EnableStartDrag>
 			<EnableDrag>true</EnableDrag>
@@ -83,7 +49,56 @@
 			<DataPath>Список</DataPath>
 			<RowFilter xsi:nil="true"/>
 			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
-			<AutoCommandBar name="СписокКоманднаяПанель" id="3"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="ОтметитьВсеДокументы" id="29">
+						<Type>CommandBarButton</Type>
+						<Representation>Picture</Representation>
+						<CommandName>Form.Command.ОтметитьВсеДокументы</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.CheckAll</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ОтметитьВсеДокументыРасширеннаяПодсказка" id="30"/>
+					</Button>
+					<Button name="СнятьОтметкиСДокументов" id="31">
+						<Type>CommandBarButton</Type>
+						<Representation>Picture</Representation>
+						<CommandName>Form.Command.СнятьОтметкиСДокументов</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="СнятьОтметкиСДокументовРасширеннаяПодсказка" id="32"/>
+					</Button>
+					<Button name="ФормаОбновитьЗаПериод" id="23">
+						<Type>CommandBarButton</Type>
+						<Representation>Picture</Representation>
+						<CommandName>Form.Command.ОбновитьЗаПериод</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.Refresh</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ФормаОбновитьЗаПериодРасширеннаяПодсказка" id="24"/>
+					</Button>
+					<Button name="СписокУстановитьИнтервал" id="43">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.УстановитьИнтервал</CommandName>
+						<ExtendedTooltip name="СписокУстановитьИнтервалРасширеннаяПодсказка" id="44"/>
+					</Button>
+					<Button name="СписокСоздатьДокументыСписание" id="38">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.СоздатьДокументыСписание</CommandName>
+						<ExtendedTooltip name="СписокСоздатьДокументыСписаниеРасширеннаяПодсказка" id="39"/>
+					</Button>
+					<Button name="СписокОтправить" id="36">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Отправить</CommandName>
+						<ExtendedTooltip name="СписокОтправитьРасширеннаяПодсказка" id="37"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
 			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="4"/>
 			<SearchStringAddition name="СписокСтрокаПоиска" id="5">
 				<AdditionSource>
@@ -128,6 +143,12 @@
 					<EditMode>EnterOnInput</EditMode>
 					<ContextMenu name="СписокДокументРеализацииКонтекстноеМеню" id="18"/>
 					<ExtendedTooltip name="СписокДокументРеализацииРасширеннаяПодсказка" id="19"/>
+				</InputField>
+				<InputField name="СписокКонтрагент" id="50">
+					<DataPath>Список.Контрагент</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокКонтрагентКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="СписокКонтрагентРасширеннаяПодсказка" id="52"/>
 				</InputField>
 				<InputField name="СписокДокументИнвентаризации" id="33">
 					<DataPath>Список.ДокументИнвентаризации</DataPath>
@@ -200,6 +221,32 @@
 						<v8:Type>cfg:DocumentRef.ВСД2_Инвентаризация</v8:Type>
 					</Type>
 				</Column>
+				<Column name="СтатусЗапроса" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус запроса</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.кб99_СтатусЗапроса</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Контрагент" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрагент</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
 			</Columns>
 		</Attribute>
 		<Attribute name="Период" id="3">
@@ -213,11 +260,48 @@
 				<v8:Type>v8:StandardPeriod</v8:Type>
 			</Type>
 		</Attribute>
+		<Attribute name="Организация" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекстПериод" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст период</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДокументыСНехватающимКоличеством" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документы с нехватающим количеством</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
 				<dcsset:selection>
 					<dcsset:item>
-						<dcsset:field>СписокДокументРеализации</dcsset:field>
+						<dcsset:field>Список</dcsset:field>
 					</dcsset:item>
 				</dcsset:selection>
 				<dcsset:filter>
@@ -230,7 +314,47 @@
 				<dcsset:appearance>
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:parameter>ЦветФона</dcscor:parameter>
-						<dcscor:value xsi:type="v8ui:Color">#FF0000</dcscor:value>
+						<dcscor:value xsi:type="v8ui:Color">web:Pink</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Список</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.СтатусЗапроса</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.кб99_СтатусЗапроса.COMPLETED</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#AAFFA0</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Список</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.СтатусЗапроса</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.кб99_СтатусЗапроса.IN_PROCESS</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#FFFF99</dcscor:value>
 					</dcscor:item>
 				</dcsset:appearance>
 			</dcsset:item>
@@ -253,20 +377,25 @@
 			<Action>ОбновитьЗаПериод</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
-		<Command name="Списать" id="2">
+		<Command name="СоздатьДокументыСписание" id="2">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Списать</v8:content>
+					<v8:content>Создать</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Списать</v8:content>
+					<v8:content>Создать документы списание</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.кб99_plus</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Action>Списать</Action>
+			<Representation>TextPicture</Representation>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ОтметитьВсеДокументы" id="3">
@@ -299,6 +428,47 @@
 				</v8:item>
 			</ToolTip>
 			<Action>СнятьОтметкиСДокументов</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Отправить" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.кб99_send</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Отправить</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УстановитьИнтервал" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить период...</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить период...</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.SetDateInterval</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьИнтервал</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>

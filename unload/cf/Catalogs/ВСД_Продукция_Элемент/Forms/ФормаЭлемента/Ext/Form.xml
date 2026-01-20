@@ -336,6 +336,12 @@
 																	<ContextMenu name="ФасовкаЕдиницаИзмеренияКонтекстноеМеню" id="56"/>
 																	<ExtendedTooltip name="ФасовкаЕдиницаИзмеренияРасширеннаяПодсказка" id="57"/>
 																</InputField>
+																<InputField name="КоэффициентПересчета" id="252">
+																	<DataPath>Объект.КоэффициентПересчета</DataPath>
+																	<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+																	<ContextMenu name="КоэффициентПересчетаКонтекстноеМеню" id="253"/>
+																	<ExtendedTooltip name="КоэффициентПересчетаРасширеннаяПодсказка" id="254"/>
+																</InputField>
 																<CheckBoxField name="Скоропортящийся" id="238">
 																	<DataPath>Объект.Скоропортящийся</DataPath>
 																	<TitleLocation>Right</TitleLocation>

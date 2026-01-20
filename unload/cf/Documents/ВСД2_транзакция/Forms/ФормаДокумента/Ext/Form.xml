@@ -1018,11 +1018,30 @@
 											<DataPath>Объект.Товары.Количество</DataPath>
 											<EditMode>EnterOnInput</EditMode>
 											<Width>10</Width>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧДЦ=3</v8:content>
+												</v8:item>
+											</Format>
+											<EditFormat>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧДЦ=3</v8:content>
+												</v8:item>
+											</EditFormat>
 											<ContextMenu name="ТоварыКоличествоКонтекстноеМеню" id="121"/>
 											<ExtendedTooltip name="ТоварыКоличествоРасширеннаяПодсказка" id="122"/>
 											<Events>
 												<Event name="OnChange">ТоварыКоличествоПриИзменении</Event>
 											</Events>
+										</InputField>
+										<InputField name="ТоварыКоличество1с" id="790">
+											<DataPath>Объект.Товары.Количество1с</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ТоварыКоличество1сКонтекстноеМеню" id="791"/>
+											<ExtendedTooltip name="ТоварыКоличество1сРасширеннаяПодсказка" id="792"/>
 										</InputField>
 										<InputField name="ТоварыЕдиницаИзмерения" id="123">
 											<DataPath>Объект.Товары.ЕдиницаИзмерения</DataPath>

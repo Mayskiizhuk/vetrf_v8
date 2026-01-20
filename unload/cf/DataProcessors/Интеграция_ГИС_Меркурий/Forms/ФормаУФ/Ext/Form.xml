@@ -453,6 +453,7 @@
 												</Button>
 												<Button name="кнАннулироватьВыбранныеВСД" id="322">
 													<Type>CommandBarButton</Type>
+													<Visible>false</Visible>
 													<Representation>PictureAndText</Representation>
 													<CommandName>Form.Command.кнАннулироватьВыбранныеВСД</CommandName>
 													<Picture>
@@ -466,6 +467,11 @@
 														</v8:item>
 													</Title>
 													<ExtendedTooltip name="кнАннулироватьВыбранныеВСДРасширеннаяПодсказка" id="323"/>
+												</Button>
+												<Button name="кнОтменитьДокументы" id="743">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.кнОтменитьДокументы</CommandName>
+													<ExtendedTooltip name="кнОтменитьДокументыРасширеннаяПодсказка" id="744"/>
 												</Button>
 											</ChildItems>
 										</Popup>
@@ -833,6 +839,57 @@
 										</Button>
 									</ChildItems>
 								</UsualGroup>
+								<RadioButtonField name="ФильтрСтатусВСД" id="740">
+									<DataPath>ФильтрСтатусВСД</DataPath>
+									<RadioButtonType>Tumbler</RadioButtonType>
+									<EqualColumnsWidth>true</EqualColumnsWidth>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Все</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">1</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>В работе</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">2</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Завершенные</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">3</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="ФильтрСтатусВСДКонтекстноеМеню" id="741"/>
+									<ExtendedTooltip name="ФильтрСтатусВСДРасширеннаяПодсказка" id="742"/>
+									<Events>
+										<Event name="OnChange">ФильтрСтатусВСДПриИзменении</Event>
+									</Events>
+								</RadioButtonField>
 								<CheckBoxField name="флСкрытьОформленные" id="737">
 									<DataPath>флСкрытьОформленные</DataPath>
 									<TitleLocation>Right</TitleLocation>
@@ -1549,6 +1606,18 @@
 									<EditMode>EnterOnInput</EditMode>
 									<DropListButton>false</DropListButton>
 									<ChoiceButton>false</ChoiceButton>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧДЦ=3</v8:content>
+										</v8:item>
+									</Format>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧДЦ=3</v8:content>
+										</v8:item>
+									</EditFormat>
 									<TextEdit>false</TextEdit>
 									<ContextMenu name="ПартииКоличествоКонтекстноеМеню" id="214"/>
 									<ExtendedTooltip name="ПартииКоличествоРасширеннаяПодсказка" id="215"/>
@@ -1568,6 +1637,18 @@
 									<EditMode>EnterOnInput</EditMode>
 									<DropListButton>false</DropListButton>
 									<ChoiceButton>false</ChoiceButton>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧДЦ=3</v8:content>
+										</v8:item>
+									</Format>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧДЦ=3</v8:content>
+										</v8:item>
+									</EditFormat>
 									<TextEdit>false</TextEdit>
 									<ContextMenu name="ПартииКоличествоСписанияКонтекстноеМеню" id="220"/>
 									<ExtendedTooltip name="ПартииКоличествоСписанияРасширеннаяПодсказка" id="221"/>
@@ -1581,6 +1662,13 @@
 									<TextEdit>false</TextEdit>
 									<ContextMenu name="ПартииКоличествоМестСписанияКонтекстноеМеню" id="223"/>
 									<ExtendedTooltip name="ПартииКоличествоМестСписанияРасширеннаяПодсказка" id="224"/>
+								</InputField>
+								<InputField name="ПартииКоличество1с" id="745">
+									<DataPath>Объект.Партии.Количество1с</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ПартииКоличество1сКонтекстноеМеню" id="746"/>
+									<ExtendedTooltip name="ПартииКоличество1сРасширеннаяПодсказка" id="747"/>
 								</InputField>
 								<InputField name="ПартииВСД_Производство" id="225">
 									<DataPath>Объект.Партии.ВСД_Производство</DataPath>
@@ -1963,6 +2051,22 @@
 			</Title>
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ФильтрСтатусВСД" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статус ВСД</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
 			</Type>
 		</Attribute>
 		<ConditionalAppearance>
@@ -2876,6 +2980,25 @@
 			</ToolTip>
 			<Action>ПолучитьПартииАктуальные</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="кнОтменитьДокументы" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить документы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить документы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.кб99_remove</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>кнОтменитьДокументы</Action>
 		</Command>
 	</Commands>
 </Form>

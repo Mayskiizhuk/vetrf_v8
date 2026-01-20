@@ -453,12 +453,50 @@
 												</InputField>
 											</ChildItems>
 										</ColumnGroup>
+										<LabelField name="ПродукцияКоличествоДоИзменения" id="530">
+											<DataPath>Объект.Продукция.КоличествоДоИзменения</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>10</Width>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧДЦ=3</v8:content>
+												</v8:item>
+											</Format>
+											<ContextMenu name="ПродукцияКоличествоДоИзмененияКонтекстноеМеню" id="531"/>
+											<ExtendedTooltip name="ПродукцияКоличествоДоИзмененияРасширеннаяПодсказка" id="532"/>
+										</LabelField>
 										<InputField name="ПродукцияКоличество" id="328">
 											<DataPath>Объект.Продукция.Количество</DataPath>
 											<EditMode>EnterOnInput</EditMode>
 											<Width>10</Width>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧДЦ=3</v8:content>
+												</v8:item>
+											</Format>
+											<EditFormat>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧДЦ=3</v8:content>
+												</v8:item>
+											</EditFormat>
 											<ContextMenu name="ПродукцияКоличествоКонтекстноеМеню" id="329"/>
 											<ExtendedTooltip name="ПродукцияКоличествоРасширеннаяПодсказка" id="330"/>
+											<Events>
+												<Event name="OnChange">ПродукцияКоличествоПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ПродукцияКоличествоРазница" id="533">
+											<DataPath>Объект.Продукция.КоличествоРазница</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>10</Width>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ПродукцияКоличествоРазницаКонтекстноеМеню" id="534"/>
+											<ExtendedTooltip name="ПродукцияКоличествоРазницаРасширеннаяПодсказка" id="535"/>
 										</InputField>
 										<InputField name="ПродукцияЕдиницаИзмерения" id="331">
 											<DataPath>Объект.Продукция.ЕдиницаИзмерения</DataPath>
