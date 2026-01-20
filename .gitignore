@@ -17,3 +17,5 @@ build/
 docs/
 *.log
 .cursor
+${app.cache.fullPath}/*
+
